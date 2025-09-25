@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rich Clothing - Online Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #f0f0f0;
+    }
+    header {
+      background: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      color: #ffcc00;
+      margin: 0;
+    }
+    nav a {
+      color: #f0f0f0;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+    }
+    .hero h2 {
+      color: #ffcc00;
+      font-size: 2.5rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+    }
+    .product {
+      background: #1f1f1f;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: scale(1.05);
+    }
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .product h3 {
+      margin: 10px 0;
+      color: #ffcc00;
+    }
+    footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rich Clothing</h1>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Style That Defines You</h2>
+    <p>Modern Online + Offline Fashion Store</p>
+  </section>
+
+  <section id="shop" class="products">
+    <div class="product" onclick="viewProduct('Men Jacket')">
+      <img src="https://source.unsplash.com/400x300/?jacket,fashion" alt="Men Jacket" />
+      <h3>Men Jacket</h3>
+      <p>$99.99</p>
+    </div>
+    <div class="product" onclick="viewProduct('Women Dress')">
+      <img src="https://source.unsplash.com/400x300/?dress,fashion" alt="Women Dress" />
+      <h3>Women Dress</h3>
+      <p>$79.99</p>
+    </div>
+    <div class="product" onclick="viewProduct('Gen Z Hoodie')">
+      <img src="https://source.unsplash.com/400x300/?hoodie,fashion" alt="Gen Z Hoodie" />
+      <h3>Gen Z Hoodie</h3>
+      <p>$59.99</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rich Clothing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function viewProduct(name) {
+      alert("Viewing product: " + name + "\n(This can be linked to a product page.)");
+    }
+  </script>
+</body>
+</html>
